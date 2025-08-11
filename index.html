@@ -3,47 +3,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>포트폴리오 | Your Name</title>
+  <title>Your Name | Portfolio</title>
+  <meta name="description" content="EE · Embedded · AI · Rocket/Drone Projects" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#study">Study</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#">Your Name</a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+        <a href="#study">Study</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle color scheme">🌓</button>
+        <button id="menuToggle" class="icon-btn hide-desktop" aria-label="Open menu">☰</button>
+      </div>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>자기소개와 연구 관심 분야를 여기에 작성하세요.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1>Embedded × AI × Real-time Visualization</h1>
+        <p class="subtitle">전기전자공학 · 임베디드 · 컴퓨터비전 · 로켓/드론 GCS · 실시간 스트리밍</p>
+        <div class="cta-row">
+          <a class="btn" href="#projects">프로젝트 보기</a>
+          <a class="btn ghost" href="#study">대학원 준비(노션)</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>KU_NURA_GCS 2025</li>
-      <li>DJI Tello YOLOv8 제어</li>
-      <li>WineCellar / WineQueen</li>
-    </ul>
-  </section>
+  <main>
+    <!-- About -->
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <p class="muted">임베디드와 AI의 경계에서 **실시간**으로 동작하는 시스템을 설계하고 만듭니다.</p>
+      <div class="grid two">
+        <div class="panel">
+          <h3>소개</h3>
+          <p>건국대 전기전자공학부. <strong>임베디드 + 비전 + 실시간 시각화</strong>에 집중하고 있어요. Raspberry Pi, Arduino, Pixhawk, Node/WebSocket/Three.js 기반의 GCS/시각화에 강점이 있습니다.</p>
+          <ul class="chips">
+            <li>Embedded AI</li><li>Real-time Systems</li><li>Guidance & Control</li><li>Telemetry</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>스택</h3>
+          <ul class="stack">
+            <li><span>언어</span><b>C/C++, Python, JavaScript</b></li>
+            <li><span>플랫폼</span><b>Raspberry Pi 5, Arduino, Pixhawk</b></li>
+            <li><span>비전/AI</span><b>OpenCV, YOLOv8, PyTorch</b></li>
+            <li><span>웹</span><b>Node.js, FastAPI, WebSocket, Three.js</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <section id="study">
-    <h2>Study (Notion)</h2>
-    <p><a href="https://www.notion.so/" target="_blank">Notion 페이지 바로가기</a></p>
-  </section>
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <p class="muted">대표 프로젝트를 카드 형태로 정리했습니다. 레포/데모/리포트를 연결하세요.</p>
+      <div class="grid three">
+        <article class="card">
+          <h3>KU_NURA_GCS 2025</h3>
+          <p>Node.js + socket.io 기반 지상관제 대시보드. Three.js Navball, 지도, 고도/가속도 그래프, 이벤트 로그.</p>
+          <ul class="tags">
+            <li>Node.js</li><li>socket.io</li><li>Three.js</li><li>Leaflet</li>
+          </ul>
+          <div class="row">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
+            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Report</a>
+          </div>
+        </article>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: you@example.com</p>
-    <p>GitHub: <a href="https://github.com/your-id" target="_blank">github.com/your-id</a></p>
-  </section>
+        <article class="card">
+          <h3>DJI Tello YOLOv8</h3>
+          <p>Tello SDK/DJITelloPy 제어 + YOLOv8 사람 인식. 실시간 스트리밍/바운딩박스.</p>
+          <ul class="tags">
+            <li>Python</li><li>OpenCV</li><li>YOLOv8</li>
+          </ul>
+          <div class="row">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
+            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Demo</a>
+          </div>
+        </article>
 
-  <footer>
-    <p>© 2025 Your Name</p>
-  </footer>
-</body>
-</html>
+        <article class="card">
+          <h3>WineQueen</h3>
+          <p>FastAPI + YOLOv8 실시간 분석 서버, WebSocket/React 연동. MJPEG 스트리밍.</p>
+          <ul class="tags">
+            <li>FastAPI</li><li>WebSocket</li><li>React</li>
+          </ul>
+          <div class="row">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
+            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Demo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>WineCellar</h3>
+          <p>Raspberry Pi5 + 카메라로 병 위치·코르크 인식, Arduino XZ 플래터 도킹 제어.</p>
+          <ul class="tags">
+            <li>Raspberry Pi</li><li>OpenCV</li><li>Arduino</li>
+          </ul>
+          <div class="row">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>백준 20056</h3>
+          <p>파이어볼 이동/분할/병합 로직 구현. 구조체 버전 최종.</p>
+          <ul class="tags">
+            <li>C</li><li>Algorithm</li>
+          </ul>
+          <div class="row">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="section container">
+      <h2>Research</h2>
+      <p class="muted">읽은 논문/노트 정리를 연결하세요. 공개 가능한 항목은 PDF/요약을 링크.</p>
+      <div class="panel">
+        <ul class="pubs">
+          <li>
+            <b>[Note]</b> Reusable Launch Vehicle Guidance/Control Survey — <a href="#" target="_blank">요약</a> / <a href="#" target="_blank">PDF</a>
+          </li>
+          <li>
+            <b>[Note]</b> Edge Vision: YOLOv8 on Raspberry Pi — <a href="#" target="_blank">요약</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Study / Notion -->
+    <section id="study" class="section container">
+      <h2>Study (Notion)</h2>
+      <p class="muted">국내/해외 대학원 준비용 페이지를 Notion으로 관리하고 이곳에 연결합니다.</p>
+      <div class="grid four notion-grid">
+        <a class="notion-card" href="https://www.notion.so/" target="_blank" rel="noopener">
+          <div class="title">국내 대학원</div>
+          <div class="desc">입시요강, 연구실/교수 리스트, 연구 키워드 매칭</div>
+        </a>
+        <a class="notion-card" href="https://www.notion.so/" target="_blank" rel="noopener">
+          <div class="title">해외 대학원</div>
+          <div class="desc">SOP/CV, 추천서, 교수 컨택 로그, 시험 일정</div>
+        </a>
+        <a class="notion-card" href="https://www.notion.so/" target="_blank" rel="noopener">
+          <div class="title">읽은 논문</div>
+          <div class="desc">요약/메모/키워드</div>
+        </a>
+        <a class="notion-card" href="https://www.notion.so/" target="_blank" rel="noopener">
+          <div class="title">학습 로그</div>
+          <div class="desc">실험노트, 코드 스니펫, TODO</div>
+        </a>
+      </div>
+
+      <!-- 공개 Notion 페이지를 iframe으로 넣고 싶다면 아래 주석 해제 후 URL 교체 -->
+      <!--
+      <div class="panel">
+        <iframe src="YOUR_PUBLIC_NOTION_URL"
+                style="width:100%;height:900px;border:none;border-radius:12px;overflow:hidden;"></iframe>
+      </div>
+      -->
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container
