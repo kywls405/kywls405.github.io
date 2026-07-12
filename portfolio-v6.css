@@ -9,8 +9,10 @@
 @media (min-width:761px){.sidebar .identity{flex-direction:column;justify-content:center;text-align:center;gap:17px}.sidebar .profile-photo{width:128px;height:128px;flex-basis:128px}.sidebar .identity strong{font-size:19px}.sidebar .identity small{max-width:218px;margin:5px auto 0;font-size:12.5px;line-height:1.55}.sidebar .site-nav{margin-top:42px}}
 @media (min-width:761px) and (max-width:1050px){.sidebar .profile-photo{width:112px;height:112px;flex-basis:112px}.sidebar .identity small{max-width:190px;font-size:12px}}
 @media (max-width:760px){.sidebar .identity{flex-direction:row;text-align:left;gap:10px}.sidebar .profile-photo{width:44px;height:44px;flex-basis:44px}.sidebar .identity small{display:none}.sidebar .site-nav{margin-top:0}}
-.intro .launch-figure img{width:100%;height:470px;aspect-ratio:auto;object-fit:contain;object-position:center;background:#dbe1e6}
+.intro .launch-figure img{width:100%;height:470px;aspect-ratio:auto;object-fit:cover;object-position:center;background:#dbe1e6}
 @media (max-width:760px){.intro .launch-figure img{height:390px}}
 .intro .welcome-heading{font-size:44px}.welcome-heading span{color:var(--blue)}
 @media (max-width:1050px){.intro .welcome-heading{font-size:40px}}
 @media (max-width:760px){.intro .welcome-heading{font-size:32px}}
+.project-wide{grid-template-rows:auto}.project-wide .project-media{aspect-ratio:1078/1256}.project-wide .project-media img{height:100%;object-fit:cover;object-position:center}
+@media (max-width:760px){.project-wide{grid-template-rows:auto auto}}
