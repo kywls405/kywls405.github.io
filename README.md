@@ -27,7 +27,7 @@ python -m http.server 4173
 .
 |-- assets/       Optimized public images used by the site
 |-- index.html    Page structure and project content
-|-- portfolio-v4.css  Responsive visual system
+|-- portfolio-v5.css  Responsive visual system
 `-- portfolio-v2.js   Navigation and active-section behavior
 ```
 
