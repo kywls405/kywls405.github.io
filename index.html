@@ -1,185 +1,206 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Name | Portfolio</title>
-  <meta name="description" content="EE · Embedded · AI · Rocket/Drone Projects" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101214">
+  <title>Yongjin Kim | Flight, Navigation & Embedded Systems</title>
+  <meta name="description" content="Yongjin Kim's portfolio in flight avionics, navigation, embedded systems, and efficient AI compute.">
+  <meta property="og:title" content="Yongjin Kim | Engineering Portfolio">
+  <meta property="og:description" content="Flight software, navigation, embedded avionics, and efficient compute.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/rocket-launch.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script defer src="scripts.js"></script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#">Your Name</a>
-      <nav class="main-nav" id="mainNav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#research">Research</a>
-        <a href="#study">Study</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hero" id="top">
+    <img class="hero-photo" src="assets/rocket-launch.webp" alt="Rocket lifting off from a wet launch pad under an overcast sky">
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <nav class="site-nav shell" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="Yongjin Kim home">
+        <i data-lucide="rocket" aria-hidden="true"></i>
+        <span>YK / 04</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#systems">Systems</a>
+        <a href="#work">Work</a>
+        <a href="#field-notes">Field notes</a>
         <a href="#contact">Contact</a>
-      </nav>
-      <div class="nav-actions">
-        <button id="themeToggle" class="icon-btn" aria-label="Toggle color scheme">🌓</button>
-        <button id="menuToggle" class="icon-btn hide-desktop" aria-label="Open menu">☰</button>
       </div>
+      <button class="icon-button menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-controls="navLinks" aria-expanded="false">
+        <i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+    </nav>
+
+    <div class="hero-content shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Flight software · navigation · embedded systems</p>
+        <h1>Yongjin<br>Kim</h1>
+        <p class="hero-lead">I build and test the software, electronics, and estimation pipelines that help autonomous systems understand motion and operate in the real world.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#systems">Explore systems <i data-lucide="arrow-down" aria-hidden="true"></i></a>
+          <a class="button button-quiet" href="https://github.com/kywls405" target="_blank" rel="noopener noreferrer">GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <dl class="mission-readout" aria-label="Portfolio focus">
+        <div><dt>MISSION</dt><dd>FLIGHT 04</dd></div>
+        <div><dt>DOMAIN</dt><dd>AVIONICS</dd></div>
+        <div><dt>BASE</dt><dd>SEOUL, KR</dd></div>
+      </dl>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div>
-        <h1>Embedded × AI × Real-time Visualization</h1>
-        <p class="subtitle">전기전자공학 · 임베디드 · 컴퓨터비전 · 로켓/드론 GCS · 실시간 스트리밍</p>
-        <div class="cta-row">
-          <a class="btn" href="#projects">프로젝트 보기</a>
-          <a class="btn ghost" href="#study">대학원 준비(노션)</a>
+  <div class="focus-strip">
+    <div class="shell focus-grid">
+      <div class="focus-main"><span>POSITION</span><strong>Embedded & autonomous systems engineer</strong></div>
+      <div><span>FOCUS 01</span><strong>GNC / estimation</strong></div>
+      <div><span>FOCUS 02</span><strong>Flight avionics</strong></div>
+      <div><span>FOCUS 03</span><strong>Efficient compute</strong></div>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="section systems-section" id="systems">
+      <div class="shell">
+        <header class="section-header">
+          <span class="section-index">01 / SYSTEMS</span>
+          <div>
+            <h2>Selected engineering work</h2>
+            <p>Projects are organized around system boundaries, implementation decisions, and evidence rather than a generic technology stack.</p>
+          </div>
+        </header>
+
+        <div class="feature" id="feature">
+          <div class="feature-visual" aria-live="polite">
+            <svg class="system-diagram is-active" data-panel="rocket" viewBox="0 0 720 430" role="img" aria-labelledby="rocketTitle rocketDesc">
+              <title id="rocketTitle">Rocket avionics system</title>
+              <desc id="rocketDesc">Flight computer connected to sensors, radio telemetry, ground control, and hardware-in-the-loop simulation.</desc>
+              <path class="grid-line" d="M40 72H680M40 215H680M40 358H680M145 35V395M360 35V395M575 35V395"/>
+              <rect class="diagram-line" x="260" y="130" width="200" height="170" rx="2"/>
+              <path class="diagram-line" d="M312 130V84h96v46M308 300v48h104v-48"/>
+              <path class="signal-line" d="M52 215h208M460 215h208"/>
+              <circle class="signal-node" cx="52" cy="215" r="10"/>
+              <circle class="signal-node" cx="668" cy="215" r="10"/>
+              <path class="diagram-line" d="M325 167h70v96h-70zM337 182h46M337 199h46M337 216h46M337 233h28"/>
+              <text x="282" y="114">FLIGHT COMPUTER</text>
+              <text x="42" y="190">SENSORS</text>
+              <text x="566" y="190">GROUND LINK</text>
+              <text x="312" y="380">HILS LOOP</text>
+            </svg>
+
+            <svg class="system-diagram" data-panel="navigation" viewBox="0 0 720 430" role="img" aria-labelledby="navTitle navDesc" hidden>
+              <title id="navTitle">INS GNSS sensor fusion</title>
+              <desc id="navDesc">Inertial propagation corrected by GNSS updates to estimate a smooth trajectory.</desc>
+              <path class="grid-line" d="M45 72H675M45 155H675M45 238H675M45 321H675M150 38V392M290 38V392M430 38V392M570 38V392"/>
+              <path class="reference-line" d="M55 335C122 312 122 194 198 205s85 132 170 68 93-168 177-133 59 122 120-67"/>
+              <path class="signal-line" d="M55 343C124 320 128 202 199 212s87 123 169 60 95-158 177-124 64 111 120-65"/>
+              <circle class="signal-node" cx="55" cy="343" r="8"/>
+              <circle class="signal-node" cx="368" cy="272" r="8"/>
+              <circle class="signal-node" cx="665" cy="83" r="8"/>
+              <text x="55" y="383">IMU PROPAGATION</text>
+              <text x="520" y="58">GNSS UPDATE</text>
+            </svg>
+
+            <svg class="system-diagram" data-panel="compute" viewBox="0 0 720 430" role="img" aria-labelledby="computeTitle computeDesc" hidden>
+              <title id="computeTitle">RISC-V optimized convolution path</title>
+              <desc id="computeDesc">Data moves through load, reuse, multiply-accumulate, activation, and store stages.</desc>
+              <path class="grid-line" d="M50 92H670M50 215H670M50 338H670"/>
+              <rect class="diagram-line" x="55" y="155" width="110" height="120"/>
+              <rect class="diagram-line" x="220" y="155" width="110" height="120"/>
+              <rect class="diagram-line" x="385" y="155" width="110" height="120"/>
+              <rect class="diagram-line" x="550" y="155" width="110" height="120"/>
+              <path class="signal-line" d="M165 215h55M330 215h55M495 215h55"/>
+              <text x="82" y="222">LOAD</text>
+              <text x="239" y="222">REUSE</text>
+              <text x="420" y="222">MAC</text>
+              <text x="572" y="222">STORE</text>
+              <text x="55" y="315">MEASURED IMPROVEMENT · 3.93×</text>
+            </svg>
+          </div>
+
+          <div class="feature-copy">
+            <div>
+              <p class="feature-index" id="featureIndex">FEATURED / ROCKET</p>
+              <h3 id="featureTitle">Rocket Avionics Stack</h3>
+              <p class="feature-description" id="featureDescription">A flight computer, telemetry link, Qt ground station, and hardware-in-the-loop replay environment developed as one testable system.</p>
+              <dl class="feature-meta" id="featureMeta">
+                <div><dt>ROLE</dt><dd>Embedded / GCS</dd></div>
+                <div><dt>STACK</dt><dd>C · C++ · Qt</dd></div>
+                <div><dt>EVIDENCE</dt><dd>Flight tested</dd></div>
+              </dl>
+              <a class="feature-link" id="featureLink" href="https://github.com/kywls405/rocket-hils-replay" target="_blank" rel="noopener noreferrer">Open repository <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="feature-tabs" role="group" aria-label="Featured project">
+              <button type="button" data-project="rocket" aria-pressed="true">Rocket</button>
+              <button type="button" data-project="navigation" aria-pressed="false">Navigation</button>
+              <button type="button" data-project="compute" aria-pressed="false">Compute</button>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="shell">
+        <header class="section-header compact-header">
+          <span class="section-index">02 / INDEX</span>
+          <div><h2>Project archive</h2></div>
+        </header>
+
+        <div class="project-list">
+          <a class="project-row" href="https://github.com/kywls405/rocket-hils-replay" target="_blank" rel="noopener noreferrer"><span class="project-number">01</span><h3>Rocket HILS Replay</h3><p>STM32 timed replay for multi-rate sensor and GNSS frames.</p><span class="project-tech">STM32 · C · Python</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a class="project-row" href="https://github.com/kywls405/ins-gnss-ekf-navigation" target="_blank" rel="noopener noreferrer"><span class="project-number">02</span><h3>INS/GNSS Navigation</h3><p>15-state loosely coupled EKF with recorded evaluation results.</p><span class="project-tech">MATLAB · EKF</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a class="project-row" href="https://github.com/kywls405/rocket-telemetry-gcs-public" target="_blank" rel="noopener noreferrer"><span class="project-number">03</span><h3>Rocket Telemetry GCS</h3><p>Ground software for telemetry decoding and live visualization.</p><span class="project-tech">C++ · Qt</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a class="project-row" href="https://github.com/kywls405/riscv-cnn-accelerator-optimization" target="_blank" rel="noopener noreferrer"><span class="project-number">04</span><h3>RISC-V CNN Optimization</h3><p>Assembly data-movement kernels validated across 168 cases.</p><span class="project-tech">RISC-V · Assembly</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a class="project-row" href="https://github.com/kywls405/tiny-nn-accelerator-verilog" target="_blank" rel="noopener noreferrer"><span class="project-number">05</span><h3>Tiny NN Accelerator</h3><p>RTL architecture and verification for compact neural inference.</p><span class="project-tech">Verilog · RTL</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          <a class="project-row" href="https://github.com/kywls405/WineQueen-public" target="_blank" rel="noopener noreferrer"><span class="project-number">06</span><h3>WineQueen</h3><p>An embedded sensing prototype developed into a usable system.</p><span class="project-tech">Embedded · Vision</span><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section field-section" id="field-notes">
+      <div class="shell">
+        <header class="section-header">
+          <span class="section-index">03 / FIELD NOTES</span>
+          <div><h2>Built outside the slide deck</h2><p>Test images are shown as engineering evidence, with the scope and limitations kept explicit.</p></div>
+        </header>
+
+        <div class="media-grid">
+          <figure class="media-large">
+            <img src="assets/tello-yolo.webp" alt="YOLO person detection running during an indoor Tello test">
+            <figcaption><span>VISION FLIGHT TEST</span><strong>Tello + YOLO · Ubuntu 22.04</strong><small>Live detection and bounding boxes were demonstrated; closed-loop following remained unfinished.</small></figcaption>
+          </figure>
+          <figure class="media-small">
+            <img src="assets/winequeen-hardware.webp" alt="WineQueen embedded hardware prototype">
+            <figcaption><span>EMBEDDED PROTOTYPE</span><strong>WineQueen hardware</strong><small>Sensing, device integration, and application workflow.</small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="shell footer-grid">
+      <div>
+        <span class="section-index">04 / CONTACT</span>
+        <h2>Research interests: navigation, autonomy, flight avionics, and embedded intelligence.</h2>
+        <p>Seoul, Republic of Korea</p>
+      </div>
+      <div class="footer-actions">
+        <a class="button button-primary" href="https://github.com/kywls405" target="_blank" rel="noopener noreferrer">GitHub profile <i data-lucide="github" aria-hidden="true"></i></a>
+        <a class="back-to-top" href="#top">Back to top <i data-lucide="arrow-up" aria-hidden="true"></i></a>
       </div>
     </div>
-    <div class="hero-bg"></div>
-  </section>
-
-  <main>
-    <!-- About -->
-    <section id="about" class="section container">
-      <h2>About</h2>
-      <p class="muted">임베디드와 AI의 경계에서 **실시간**으로 동작하는 시스템을 설계하고 만듭니다.</p>
-      <div class="grid two">
-        <div class="panel">
-          <h3>소개</h3>
-          <p>건국대 전기전자공학부. <strong>임베디드 + 비전 + 실시간 시각화</strong>에 집중하고 있어요. Raspberry Pi, Arduino, Pixhawk, Node/WebSocket/Three.js 기반의 GCS/시각화에 강점이 있습니다.</p>
-          <ul class="chips">
-            <li>Embedded AI</li><li>Real-time Systems</li><li>Guidance & Control</li><li>Telemetry</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>스택</h3>
-          <ul class="stack">
-            <li><span>언어</span><b>C/C++, Python, JavaScript</b></li>
-            <li><span>플랫폼</span><b>Raspberry Pi 5, Arduino, Pixhawk</b></li>
-            <li><span>비전/AI</span><b>OpenCV, YOLOv8, PyTorch</b></li>
-            <li><span>웹</span><b>Node.js, FastAPI, WebSocket, Three.js</b></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section container">
-      <h2>Projects</h2>
-      <p class="muted">대표 프로젝트를 카드 형태로 정리했습니다. 레포/데모/리포트를 연결하세요.</p>
-      <div class="grid three">
-        <article class="card">
-          <h3>KU_NURA_GCS 2025</h3>
-          <p>Node.js + socket.io 기반 지상관제 대시보드. Three.js Navball, 지도, 고도/가속도 그래프, 이벤트 로그.</p>
-          <ul class="tags">
-            <li>Node.js</li><li>socket.io</li><li>Three.js</li><li>Leaflet</li>
-          </ul>
-          <div class="row">
-            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
-            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Report</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>DJI Tello YOLOv8</h3>
-          <p>Tello SDK/DJITelloPy 제어 + YOLOv8 사람 인식. 실시간 스트리밍/바운딩박스.</p>
-          <ul class="tags">
-            <li>Python</li><li>OpenCV</li><li>YOLOv8</li>
-          </ul>
-          <div class="row">
-            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
-            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Demo</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>WineQueen</h3>
-          <p>FastAPI + YOLOv8 실시간 분석 서버, WebSocket/React 연동. MJPEG 스트리밍.</p>
-          <ul class="tags">
-            <li>FastAPI</li><li>WebSocket</li><li>React</li>
-          </ul>
-          <div class="row">
-            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
-            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Demo</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>WineCellar</h3>
-          <p>Raspberry Pi5 + 카메라로 병 위치·코르크 인식, Arduino XZ 플래터 도킹 제어.</p>
-          <ul class="tags">
-            <li>Raspberry Pi</li><li>OpenCV</li><li>Arduino</li>
-          </ul>
-          <div class="row">
-            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>백준 20056</h3>
-          <p>파이어볼 이동/분할/병합 로직 구현. 구조체 버전 최종.</p>
-          <ul class="tags">
-            <li>C</li><li>Algorithm</li>
-          </ul>
-          <div class="row">
-            <a class="btn small" href="#" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Research -->
-    <section id="research" class="section container">
-      <h2>Research</h2>
-      <p class="muted">읽은 논문/노트 정리를 연결하세요. 공개 가능한 항목은 PDF/요약을 링크.</p>
-      <div class="panel">
-        <ul class="pubs">
-          <li>
-            <b>[Note]</b> Reusable Launch Vehicle Guidance/Control Survey — <a href="#" target="_blank">요약</a> / <a href="#" target="_blank">PDF</a>
-          </li>
-          <li>
-            <b>[Note]</b> Edge Vision: YOLOv8 on Raspberry Pi — <a href="#" target="_blank">요약</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Study / Notion -->
-    <section id="study" class="section container">
-      <h2>Study (Notion)</h2>
-      <p class="muted">국내/해외 대학원 준비용 페이지를 Notion으로 관리하고 이곳에 연결합니다.</p>
-      <div class="grid four notion-grid">
-        <a class="notion-card" href="https://www.notion.so/" target="_blank" rel="noopener">
-          <div class="title">국내 대학원</div>
-          <div class="desc">입시요강, 연구실/교수 리스트, 연구 키워드 매칭</div>
-        </a>
-        <a class="notion-card" href="https://www.notion.so/" target="_blank" rel="noopener">
-          <div class="title">해외 대학원</div>
-          <div class="desc">SOP/CV, 추천서, 교수 컨택 로그, 시험 일정</div>
-        </a>
-        <a class="notion-card" href="https://www.notion.so/" target="_blank" rel="noopener">
-          <div class="title">읽은 논문</div>
-          <div class="desc">요약/메모/키워드</div>
-        </a>
-        <a class="notion-card" href="https://www.notion.so/" target="_blank" rel="noopener">
-          <div class="title">학습 로그</div>
-          <div class="desc">실험노트, 코드 스니펫, TODO</div>
-        </a>
-      </div>
-
-      <!-- 공개 Notion 페이지를 iframe으로 넣고 싶다면 아래 주석 해제 후 URL 교체 -->
-      <!--
-      <div class="panel">
-        <iframe src="YOUR_PUBLIC_NOTION_URL"
-                style="width:100%;height:900px;border:none;border-radius:12px;overflow:hidden;"></iframe>
-      </div>
-      -->
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section container
+    <div class="shell footer-bottom"><span>© <span id="year"></span> Yongjin Kim</span><span>Designed around real systems and measured work.</span></div>
+  </footer>
+</body>
+</html>

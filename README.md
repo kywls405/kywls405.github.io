@@ -1,10 +1,32 @@
-# 포트폴리오 스타터
+# Yongjin Kim Portfolio
 
-## 사용법
-1. GitHub에서 새 레포를 만듭니다: `your-id.github.io`
-2. 이 폴더의 모든 파일을 업로드합니다 (`index.html`, `styles.css`, `README.md`).
-3. GitHub → Settings → Pages → Branch `main` / root(`/`) 선택.
-4. 배포 주소: `https://your-id.github.io`
+Personal engineering portfolio published at [kywls405.github.io](https://kywls405.github.io/).
 
-## Notion 연동
-- `index.html`의 Study 섹션에 Notion 공개 URL을 넣어주세요.
+The site highlights work in:
+
+- Rocket avionics and hardware-in-the-loop testing
+- INS/GNSS navigation and sensor fusion
+- Ground-control and telemetry software
+- RISC-V CNN kernel optimization
+- RTL neural-network acceleration
+- Embedded vision prototypes
+
+## Local preview
+
+Open `index.html` directly, or run a static server from the repository root:
+
+```bash
+python -m http.server 4173
+```
+
+## Structure
+
+```text
+.
+|-- assets/       Optimized public images used by the site
+|-- index.html    Page structure and project content
+|-- styles.css    Responsive visual system
+`-- scripts.js    Project switcher and mobile navigation
+```
+
+The portfolio is deployed through GitHub Pages from the `main` branch.
