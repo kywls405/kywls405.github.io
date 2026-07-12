@@ -9,6 +9,8 @@ The site highlights work in:
 - Ground-control and telemetry software
 - RISC-V CNN kernel optimization
 - RTL neural-network acceleration
+- Zynq FFT software optimization
+- Pipelined CPU architecture
 - Embedded vision prototypes
 
 ## Local preview
@@ -25,8 +27,8 @@ python -m http.server 4173
 .
 |-- assets/       Optimized public images used by the site
 |-- index.html    Page structure and project content
-|-- styles.css    Responsive visual system
-`-- scripts.js    Project switcher and mobile navigation
+|-- portfolio-v2.css  Responsive visual system
+`-- portfolio-v2.js   Navigation and active-section behavior
 ```
 
 The portfolio is deployed through GitHub Pages from the `main` branch.
