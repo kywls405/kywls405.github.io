@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f6f8">
   <title>Yongjin Kim | Electrical Engineering</title>
-  <meta name="description" content="Yongjin Kim's engineering portfolio in navigation, flight avionics, embedded systems, and efficient compute.">
+  <meta name="description" content="Yongjin Kim's engineering portfolio in guidance, navigation, state estimation, embedded avionics, and digital hardware.">
   <meta property="og:title" content="Yongjin Kim | Engineering Portfolio">
-  <meta property="og:description" content="Navigation, embedded avionics, and efficient compute.">
+  <meta property="og:description" content="Guidance, navigation, state estimation, embedded avionics, and digital hardware.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/rocket-launch-hero.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
       </nav>
 
       <div class="social-links" aria-label="External profiles">
-        <a href="assets/CV_YongjinKim.pdf?v=3bcea2f" target="_blank" rel="noopener noreferrer" aria-label="CV (PDF)"><i data-lucide="file-text" aria-hidden="true"></i></a>
+        <a href="assets/CV_YongjinKim.pdf?v=72d8f9" target="_blank" rel="noopener noreferrer" aria-label="CV (PDF)"><i data-lucide="file-text" aria-hidden="true"></i></a>
         <a href="https://github.com/kywls405" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/in/yongjin-kim-ee/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin" aria-hidden="true"></i></a>
         <a href="mailto:kywls405@konkuk.ac.kr" aria-label="Email"><i data-lucide="mail" aria-hidden="true"></i></a>
@@ -52,7 +52,7 @@
     <section class="intro section" id="about">
       <div class="intro-copy">
         <h1 class="welcome-heading">Welcome! I'm <span>Yongjin Kim</span>.</h1>
-        <p class="lead">I am an electrical engineering student interested in guidance and control, trajectory optimization, and nonlinear and adaptive control for aerospace systems.</p>
+        <p class="lead">I am an electrical engineering student interested in guidance, navigation, and control, with a focus on state estimation and embedded avionics for aerospace systems.</p>
         <div class="intro-actions">
           <a class="primary-button" href="#projects">View selected work<i data-lucide="arrow-down" aria-hidden="true"></i></a>
           <a class="text-link" href="https://github.com/kywls405" target="_blank" rel="noopener noreferrer">GitHub profile<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
@@ -68,13 +68,12 @@
       <header class="section-heading">
         <p class="section-number">02 / Research</p>
         <h2>Areas of interest</h2>
-        <p>My interests center on aerospace guidance, trajectory design, and control under nonlinear and changing flight conditions.</p>
+        <p>My interests center on integrated guidance and navigation, reliable state estimation, and flight-ready embedded avionics.</p>
       </header>
       <div class="interest-grid">
-        <article><i data-lucide="orbit" aria-hidden="true"></i><h3>Guidance and Control</h3><p>Guidance laws and control-system design for aerospace vehicles.</p></article>
-        <article><i data-lucide="route" aria-hidden="true"></i><h3>Trajectory Optimization</h3><p>Optimal trajectory generation under vehicle dynamics and mission constraints.</p></article>
-        <article><i data-lucide="activity" aria-hidden="true"></i><h3>Nonlinear and Adaptive Control</h3><p>Robust flight control across nonlinear dynamics and changing operating conditions.</p></article>
-        <article><i data-lucide="cpu" aria-hidden="true"></i><h3>Digital Hardware</h3><p>RTL accelerators and compute-efficient architectures for embedded systems.</p></article>
+        <article><i data-lucide="orbit" aria-hidden="true"></i><h3>Guidance, Navigation, and Control</h3><p>Integrated guidance and control methods for aerospace vehicle navigation.</p></article>
+        <article><i data-lucide="activity" aria-hidden="true"></i><h3>State Estimation</h3><p>Multi-sensor navigation and Kalman filtering for reliable motion-state estimation.</p></article>
+        <article><i data-lucide="cpu" aria-hidden="true"></i><h3>Embedded Avionics</h3><p>Real-time flight computers, sensor interfaces, and hardware validation systems.</p></article>
       </div>
     </section>
 
@@ -88,12 +87,22 @@
       <div class="project-grid">
         <article class="project-card project-wide">
           <div class="project-media"><img src="assets/rocket-avionics-card.png" alt="Rocket and ground-level exhaust during a NURA launch test"></div>
-          <div class="project-body"><p class="project-type">Flight systems</p><h3>Rocket Avionics and Validation</h3><p>Built telemetry ground software and developed an STM32F405 replay platform for repeatable avionics firmware validation.</p><div class="tags"><span>STM32</span><span>C/C++</span><span>Telemetry</span><span>HILS</span></div><div class="project-links"><a href="https://github.com/kywls405/rocket-hils-replay" target="_blank" rel="noopener noreferrer">HILS repository<i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://github.com/kywls405/rocket-telemetry-gcs" target="_blank" rel="noopener noreferrer">GCS repository<i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div></div>
+          <div class="project-body"><p class="project-type">Flight systems</p><h3>Rocket Avionics and Validation</h3><p>Developing an STM32F405 HILS replay platform and an Arty A7-100T multi-sensor navigation architecture, building on a flight-tested telemetry GCS.</p><div class="tags"><span>STM32</span><span>FPGA</span><span>HLS</span><span>Telemetry</span><span>HILS</span></div><div class="project-links"><a href="https://github.com/kywls405/rocket-hils-replay" target="_blank" rel="noopener noreferrer">HILS repository<i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://github.com/kywls405/rocket-telemetry-gcs" target="_blank" rel="noopener noreferrer">GCS repository<i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div></div>
         </article>
 
         <article class="project-card">
           <div class="diagram navigation-diagram" aria-hidden="true"><span>IMU</span><b>15-state EKF</b><span>GNSS</span><i></i></div>
-          <div class="project-body"><p class="project-type">Navigation</p><h3>INS/GNSS Integrated Navigation</h3><p>Evaluated a loosely coupled extended Kalman filter using reference position, velocity, and attitude data.</p><div class="tags"><span>MATLAB</span><span>EKF</span><span>Sensor Fusion</span></div><a class="project-link" href="https://github.com/kywls405/ins-gnss-ekf-navigation" target="_blank" rel="noopener noreferrer">View repository<i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+          <div class="project-body"><p class="project-type">Navigation</p><h3>INS/GNSS Integrated Navigation</h3><p>Implemented and evaluated a 15-state loosely coupled EKF for UGV trajectory estimation, including position, velocity, and attitude error analysis.</p><div class="tags"><span>MATLAB</span><span>EKF</span><span>INS/GNSS</span></div><a class="project-link" href="https://github.com/kywls405/ins-gnss-ekf-navigation" target="_blank" rel="noopener noreferrer">View repository<i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div>
+        </article>
+
+        <article class="project-card">
+          <div class="diagram target-diagram" aria-hidden="true"><span></span><span></span><i></i><b>FEATURES + FLOW</b></div>
+          <div class="project-body"><p class="project-type">Computer vision</p><h3>Landing Target Detection and Tracking</h3><p>Developing real-time landing-target detection and relative motion tracking with C++/OpenCV feature matching and optical flow.</p><div class="tags"><span>C++</span><span>OpenCV</span><span>Optical Flow</span></div><span class="project-status">Ongoing</span></div>
+        </article>
+
+        <article class="project-card">
+          <div class="diagram localization-diagram" aria-hidden="true"><span>A1</span><span>A2</span><b>UWB / IMU</b><span>A3</span><span>A4</span></div>
+          <div class="project-body"><p class="project-type">Indoor localization</p><h3>UWB/IMU Localization and IoT Monitoring</h3><p>Developing a Raspberry Pi 4-based localization system with sensor fusion, database logging, and web-based monitoring and control.</p><div class="tags"><span>Raspberry Pi</span><span>UWB</span><span>IMU</span><span>IoT</span></div><span class="project-status">Ongoing</span></div>
         </article>
 
         <article class="project-card">
@@ -124,7 +133,7 @@
 
       <div class="more-work">
         <h3>More work</h3>
-        <a href="https://github.com/kywls405/riscv-cnn-accelerator-optimization" target="_blank" rel="noopener noreferrer"><span>RISC-V CNN Accelerator Optimization</span><small>Assembly data movement and address generation</small><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        <a href="https://github.com/kywls405/riscv-cnn-accelerator-optimization" target="_blank" rel="noopener noreferrer"><span>RISC-V CNN Accelerator Optimization</span><small>Assembly data movement, address generation, and validation across 168 convolution cases</small><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
         <a href="https://github.com/kywls405/stroller-active-suspension" target="_blank" rel="noopener noreferrer"><span>Active Suspension System</span><small>Motor-actuated stroller vibration reduction, ongoing</small><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
       </div>
     </section>
@@ -132,17 +141,22 @@
     <section class="section" id="experience">
       <header class="section-heading"><p class="section-number">04 / Experience</p><h2>Education and experience</h2></header>
       <div class="timeline">
-        <article><time>2025 - Present</time><div><h3>ASEC Rocket Team</h3><p>Electronics Team Member, Konkuk University</p></div></article>
-        <article><time>2025 - 2026</time><div><h3>Intelligent Navigation and Control Laboratory</h3><p>Undergraduate Research Assistant, Konkuk University</p></div></article>
-        <article><time>2022 - Present</time><div><h3>Konkuk University</h3><p>B.S. Candidate, Electrical and Electronics Engineering</p></div></article>
+        <article><time>Mar. 2025 - Present</time><div><h3>ASEC Rocket Team</h3><p>Electronics Team Member, Konkuk University</p></div></article>
+        <article><time>Dec. 2025 - Jun. 2026</time><div><h3>Intelligent Navigation and Control Laboratory</h3><p>Undergraduate Research Student, Konkuk University</p></div></article>
+        <article><time>Mar. 2022 - Feb. 2028</time><div><h3>Konkuk University</h3><p>B.S. Candidate in Electrical and Electronics Engineering</p><small>Expected graduation: February 2028</small></div></article>
       </div>
-      <div class="recognition"><i data-lucide="award" aria-hidden="true"></i><div><small>Recognition</small><strong>4th Place / Sponsor Award</strong><span>34th NURA Rocket Competition</span></div></div>
+      <div class="recognition-list" aria-label="Awards and recognition">
+        <div class="recognition"><i data-lucide="award" aria-hidden="true"></i><div><small>September 2026</small><strong>Finalist</strong><span>2026 KASA Aerospace Academic Competition, Team NavBoost</span></div></div>
+        <div class="recognition"><i data-lucide="trophy" aria-hidden="true"></i><div><small>August 2026</small><strong>KASA Administrator's Award, 1st Place</strong><span>35th NURA National University Rocket Launch Competition</span></div></div>
+        <div class="recognition"><i data-lucide="medal" aria-hidden="true"></i><div><small>July 2026</small><strong>KARI President's Award, 2nd Place</strong><span>35th NURA National University Rocket Academic Conference</span></div></div>
+        <div class="recognition"><i data-lucide="award" aria-hidden="true"></i><div><small>August 2025</small><strong>Sponsor's Award, 4th Place</strong><span>34th NURA National University Rocket Launch Competition</span></div></div>
+      </div>
     </section>
 
     <section class="contact section" id="contact">
       <p class="section-number">05 / Contact</p>
       <p>For research and engineering conversations, reach me by email or through the profiles below.</p>
-      <div class="contact-links"><a href="assets/CV_YongjinKim.pdf?v=3bcea2f" target="_blank" rel="noopener noreferrer"><i data-lucide="file-text" aria-hidden="true"></i>CV</a><a href="mailto:kywls405@konkuk.ac.kr"><i data-lucide="mail" aria-hidden="true"></i>kywls405@konkuk.ac.kr</a><a href="https://github.com/kywls405" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i>GitHub</a><a href="https://www.linkedin.com/in/yongjin-kim-ee/" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i>LinkedIn</a></div>
+      <div class="contact-links"><a href="assets/CV_YongjinKim.pdf?v=72d8f9" target="_blank" rel="noopener noreferrer"><i data-lucide="file-text" aria-hidden="true"></i>CV</a><a href="mailto:kywls405@konkuk.ac.kr"><i data-lucide="mail" aria-hidden="true"></i>kywls405@konkuk.ac.kr</a><a href="https://github.com/kywls405" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i>GitHub</a><a href="https://www.linkedin.com/in/yongjin-kim-ee/" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" aria-hidden="true"></i>LinkedIn</a></div>
       <footer><span>&copy; <span id="year"></span> Yongjin Kim</span><a href="#about">Back to top<i data-lucide="arrow-up" aria-hidden="true"></i></a></footer>
     </section>
   </main>
