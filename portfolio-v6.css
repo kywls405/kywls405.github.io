@@ -31,5 +31,8 @@
 .localization-diagram b{bottom:auto;padding:11px 14px;background:var(--ink);color:#fff}
 .recognition-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:32px}
 .recognition{height:100%;margin-top:0}
+.interest-grid article:first-child h3{font-size:12px;white-space:nowrap}
+.project-card:not(.project-wide) .project-body h3{font-size:15px;white-space:nowrap}
+.recognition em{display:block;margin-top:3px;color:var(--muted);font-size:12px;font-style:italic}
 @media (max-width:1050px){.interest-grid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:760px){.interest-grid,.recognition-list{grid-template-columns:1fr}}
