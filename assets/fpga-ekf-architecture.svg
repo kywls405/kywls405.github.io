@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">FPGA-MCU EKF navigation architecture</title>
+  <desc id="desc">Multi-sensor inputs enter an HLS-based 21-state EKF on the FPGA before navigation output is sent to the mission MCU.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef4f8"/>
+      <stop offset="1" stop-color="#dce8f1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#13253a" flood-opacity=".14"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#2766a5"/>
+    </marker>
+    <style>
+      .label{font-family:Arial,sans-serif;fill:#15202b}
+      .mono{font-family:monospace;letter-spacing:1px}
+      .small{font-size:18px;font-weight:700}
+      .tiny{font-size:14px;font-weight:700}
+      .muted{fill:#5b7183;font-size:14px}
+      .node{fill:#fff;stroke:#7895ad;stroke-width:2}
+      .flow{stroke:#2766a5;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1200" height="680" rx="28" fill="url(#bg)"/>
+  <path d="M38 92H1162" stroke="#b8cbd9" stroke-width="2"/>
+  <text x="48" y="58" class="label mono small" fill="#195fa7">FPGA-MCU / EKF ACCELERATION</text>
+  <text x="1152" y="58" text-anchor="end" class="label mono tiny" fill="#607080">HLS NAVIGATION CORE</text>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="150" width="184" height="360" rx="20" fill="#16283e"/>
+    <text x="140" y="190" text-anchor="middle" class="label" fill="#fff" font-size="24" font-weight="700">SENSORS</text>
+    <text x="140" y="215" text-anchor="middle" class="label" fill="#a7c3dc" font-size="13">multi-rate inputs</text>
+    <rect x="78" y="250" width="124" height="42" rx="9" class="node"/>
+    <text x="140" y="277" text-anchor="middle" class="label small">IMU</text>
+    <rect x="78" y="312" width="124" height="42" rx="9" class="node"/>
+    <text x="140" y="339" text-anchor="middle" class="label small">GNSS</text>
+    <rect x="78" y="374" width="124" height="42" rx="9" class="node"/>
+    <text x="140" y="401" text-anchor="middle" class="label small">BARO</text>
+    <rect x="78" y="436" width="124" height="42" rx="9" class="node"/>
+    <text x="140" y="463" text-anchor="middle" class="label small">MAG</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="278" y="128" width="600" height="404" rx="24" fill="#fff" stroke="#24496e" stroke-width="4"/>
+    <text x="308" y="171" class="label" fill="#195fa7" font-size="26" font-weight="700">FPGA</text>
+    <text x="845" y="171" text-anchor="end" class="label mono tiny" fill="#607080">21-STATE EKF</text>
+    <rect x="308" y="205" width="184" height="54" rx="10" class="node"/>
+    <text x="400" y="238" text-anchor="middle" class="label small">SENSOR IF</text>
+    <path d="M400 259V285" class="flow"/>
+    <rect x="308" y="291" width="184" height="54" rx="10" class="node"/>
+    <text x="400" y="324" text-anchor="middle" class="label small">SYNC + FIFO</text>
+    <path d="M400 345V371" class="flow"/>
+    <rect x="308" y="377" width="184" height="86" rx="10" fill="#16283e"/>
+    <text x="400" y="414" text-anchor="middle" class="label" fill="#fff" font-size="20" font-weight="700">EKF CONTROL</text>
+    <text x="400" y="440" text-anchor="middle" class="label" fill="#a7c3dc" font-size="14">FSM + scheduler</text>
+
+    <rect x="530" y="205" width="306" height="258" rx="14" fill="#eaf3fb" stroke="#9ab9d5" stroke-width="2"/>
+    <text x="683" y="238" text-anchor="middle" class="label small">COVARIANCE ENGINE</text>
+    <rect x="558" y="260" width="104" height="104" fill="#fff" stroke="#7895ad" stroke-width="2"/>
+    <g fill="#2766a5">
+      <rect x="568" y="270" width="12" height="12"/><rect x="586" y="270" width="12" height="12"/><rect x="604" y="270" width="12" height="12"/>
+      <rect x="568" y="288" width="12" height="12"/><rect x="604" y="288" width="12" height="12"/>
+      <rect x="568" y="306" width="12" height="12"/><rect x="622" y="306" width="12" height="12"/>
+      <rect x="568" y="324" width="12" height="12"/><rect x="640" y="324" width="12" height="12"/>
+      <rect x="568" y="342" width="12" height="12"/><rect x="586" y="342" width="12" height="12"/><rect x="604" y="342" width="12" height="12"/>
+    </g>
+    <text x="610" y="389" text-anchor="middle" class="label mono tiny" fill="#607080">7x7 BLOCKS</text>
+    <rect x="690" y="260" width="116" height="40" rx="8" fill="#fff" stroke="#7895ad" stroke-width="2"/>
+    <text x="748" y="286" text-anchor="middle" class="label tiny">3x3 MAC</text>
+    <rect x="690" y="312" width="116" height="40" rx="8" fill="#fff" stroke="#7895ad" stroke-width="2"/>
+    <text x="748" y="338" text-anchor="middle" class="label tiny">PIPELINE</text>
+    <rect x="690" y="364" width="116" height="40" rx="8" fill="#16283e"/>
+    <text x="748" y="390" text-anchor="middle" class="label tiny" fill="#fff">DATA REUSE</text>
+    <text x="683" y="440" text-anchor="middle" class="label muted">HLS / block parallelism / sensor update</text>
+  </g>
+
+  <path d="M232 330H278" class="flow"/>
+  <path d="M878 330H932" class="flow"/>
+  <text x="905" y="306" text-anchor="middle" class="label mono tiny" fill="#195fa7">NAV OUTPUT</text>
+
+  <g filter="url(#shadow)">
+    <rect x="932" y="150" width="220" height="360" rx="20" fill="#16283e"/>
+    <text x="1042" y="190" text-anchor="middle" class="label" fill="#fff" font-size="24" font-weight="700">MCU</text>
+    <text x="1042" y="215" text-anchor="middle" class="label" fill="#a7c3dc" font-size="13">mission computer</text>
+    <rect x="972" y="250" width="140" height="48" rx="9" class="node"/>
+    <text x="1042" y="280" text-anchor="middle" class="label tiny">MISSION</text>
+    <rect x="972" y="316" width="140" height="48" rx="9" class="node"/>
+    <text x="1042" y="346" text-anchor="middle" class="label tiny">CONTROL</text>
+    <rect x="972" y="382" width="140" height="48" rx="9" class="node"/>
+    <text x="1042" y="412" text-anchor="middle" class="label tiny">TELEMETRY</text>
+    <rect x="972" y="448" width="140" height="48" rx="9" class="node"/>
+    <text x="1042" y="478" text-anchor="middle" class="label tiny">LOGGING</text>
+  </g>
+</svg>

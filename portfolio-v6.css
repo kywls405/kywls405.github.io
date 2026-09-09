@@ -19,9 +19,7 @@
 .welcome-heading span{display:inline-block;white-space:nowrap}
 .interest-grid{grid-template-columns:repeat(3,1fr)}
 .project-status{margin-top:auto;color:var(--blue);font:500 11px/1.4 "IBM Plex Mono",monospace;text-transform:uppercase}
-.fpga-diagram{display:grid;grid-template-columns:repeat(2,62px);grid-template-rows:repeat(2,42px);gap:32px 58px}
-.fpga-diagram span{display:grid;place-items:center;background:#fff;border:1px solid #8396a4;font:500 10px/1 "IBM Plex Mono",monospace}
-.fpga-diagram b{position:absolute;padding:11px 12px;background:var(--ink);color:#fff;font:500 10px/1 "IBM Plex Mono",monospace}
+.fpga-thumbnail img{width:100%;height:100%;object-fit:cover;object-position:center}
 .target-diagram span{position:absolute;width:112px;height:112px;border:2px solid var(--blue)}
 .target-diagram span:nth-child(2){width:58px;height:58px;border-color:var(--teal)}
 .target-diagram i{width:12px;height:12px;border:2px solid var(--red);border-radius:50%}
