@@ -5,7 +5,9 @@ Personal engineering portfolio published at [kywls405.github.io](https://kywls40
 The site highlights work in:
 
 - Rocket avionics and hardware-in-the-loop testing
+- FPGA-accelerated multi-sensor navigation
 - INS/GNSS navigation and sensor fusion
+- Vision and optical navigation prototypes
 - Ground-control and telemetry software
 - RISC-V CNN kernel optimization
 - RTL neural-network acceleration
