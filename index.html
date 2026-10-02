@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portfolio-v6.css">
+  <link rel="stylesheet" href="portfolio-v6.css?v=capstone-20261002">
   <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
   <script defer src="portfolio-v2.js"></script>
 </head>
@@ -89,6 +89,11 @@
           <div class="project-body"><p class="project-type">Flight systems</p><h3>Rocket Avionics and Validation</h3><p>Built a real-time telemetry GCS verified at approximately 600 m and developing an STM32F405 HILS replay platform for repeatable avionics firmware validation.</p><div class="tags"><span>STM32</span><span>C/C++</span><span>Telemetry</span><span>HILS</span></div><div class="project-links"><a href="https://github.com/kywls405/rocket-hils-replay" target="_blank" rel="noopener noreferrer">HILS repository<i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://github.com/kywls405/rocket-telemetry-gcs" target="_blank" rel="noopener noreferrer">GCS repository<i data-lucide="arrow-up-right" aria-hidden="true"></i></a></div></div>
         </article>
 
+        <article class="project-card" id="active-suspension-project">
+          <div class="diagram navigation-diagram" aria-hidden="true"><span>IMU</span><b>CHASSIS PD</b><span>2 MOTORS</span><i></i></div>
+          <div class="project-body"><p class="project-type">Embedded control</p><h3>IMU-Based Active Suspension</h3><p>Implemented chassis roll/pitch PD control on an STM32F405 for a four-motor stroller-scale testbed, with Arduino UNO R4 WiFi telemetry and web ON/OFF control. Final firmware, a demonstration video, and the submission report are published; closed-loop performance validation remains ongoing.</p><div class="tags"><span>STM32</span><span>PD Control</span><span>IMU</span><span>Telemetry</span></div><div class="project-links"><a href="https://github.com/kywls405/stroller-active-suspension" target="_blank" rel="noopener noreferrer">Repository<i data-lucide="arrow-up-right" aria-hidden="true"></i></a><a href="https://github.com/kywls405/stroller-active-suspension/blob/main/Display_Video.mp4" target="_blank" rel="noopener noreferrer">Demo video<i data-lucide="play" aria-hidden="true"></i></a><a href="https://github.com/kywls405/stroller-active-suspension/blob/main/IMU%20%EA%B8%B0%EB%B0%98%20%EC%95%A1%ED%8B%B0%EB%B8%8C%20%EC%84%9C%EC%8A%A4%ED%8E%9C%EC%85%98%20%EC%9C%A0%EB%AA%A8%EC%B0%A8%EC%9D%98%20%EC%A7%84%EB%8F%99%20%EC%A0%80%EA%B0%90%20%EB%B0%8F%20%EC%9E%90%EC%84%B8%20%EC%95%88%EC%A0%95%ED%99%94%20%EC%8B%9C%EC%8A%A4%ED%85%9C.pdf" target="_blank" rel="noopener noreferrer">Report (PDF)<i data-lucide="file-text" aria-hidden="true"></i></a></div></div>
+        </article>
+
         <article class="project-card">
           <div class="project-media fpga-thumbnail"><img src="assets/fpga-ekf-architecture.svg" alt="FPGA-MCU architecture showing multi-sensor inputs, an HLS EKF engine, and mission MCU outputs"></div>
           <div class="project-body"><p class="project-type">FPGA navigation</p><h3>FPGA-Accelerated Multi-Sensor Navigation</h3><p>Developing an HLS-based 21-state EKF and an Arty A7-100T architecture to synchronize multi-rate IMU, GNSS, barometer, and magnetometer data.</p><div class="tags"><span>HLS</span><span>Arty A7-100T</span><span>EKF</span><span>FPGA</span></div><span class="project-status">Ongoing</span></div>
@@ -138,7 +143,6 @@
       <div class="more-work">
         <h3>More work</h3>
         <a href="https://github.com/kywls405/riscv-cnn-accelerator-optimization" target="_blank" rel="noopener noreferrer"><span>CNN Accelerator Optimization with RISC-V</span><small>Assembly data movement, address generation, memory-access scheduling, and validation across 168 convolution cases</small><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-        <a href="https://github.com/kywls405/stroller-active-suspension" target="_blank" rel="noopener noreferrer"><span>Active Suspension System</span><small>Motor-actuated stroller vibration reduction with an IMU-based evaluation workflow, ongoing</small><i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
       </div>
     </section>
 
